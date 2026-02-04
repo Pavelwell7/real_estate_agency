@@ -8,7 +8,6 @@ class OwnerInline(admin.TabularInline):
     verbose_name = "Собственник(и)"
     extra = 1
 
-
 class FlatAdmin(admin.ModelAdmin):
     search_fields = ['town', 'address',]
     readonly_fields = ['construction_year']
@@ -37,4 +36,5 @@ class OwnerAdmin(admin.ModelAdmin):
     raw_id_fields = ['flat']
 
 admin.site.register(Owner, OwnerAdmin)
+
 
